@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zero Efforts – Program Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --orange: #FF6F20;
+      --light-orange: #FF884D;
+      --gray-bg: #f9f9f9;
+      --text-dark: #1a1a1a;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--white);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* Header Section */
+    .header {
+      background-color: var(--orange);
+      color: var(--white);
+      padding: 3rem 2rem;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .header p {
+      font-size: 1.2rem;
+      opacity: 0.95;
+    }
+
+    /* Quote Section */
+    .quote {
+        background-color: var(--gray-bg);
+        padding: 2rem;
+        font-style: italic;
+        font-family: 'Playfair Display', serif;
+        text-align: center;
+        border-left: 5px solid var(--orange);
+        margin: 2rem 1rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        transition: transform 0.3s ease;
+    }
+
+
+    .quote:hover {
+      transform: scale(1.02);
+    }
+
+    /* Content Section */
+    .content {
+      padding: 2rem;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .content h2 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    .content p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+
+    /* Video Section */
+    .video-container {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .video-container iframe {
+      width: 90%;
+      max-width: 700px;
+      height: 400px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .video-container iframe:hover {
+      transform: scale(1.01);
+    }
+
+    /* Program Details Section */
+    .program-details {
+      background-color: var(--orange);
+      color: var(--white);
+      padding: 3rem 2rem;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .program-details h2 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    .program-details ul {
+      list-style: none;
+      margin: 1rem 0;
+      padding: 0;
+    }
+
+    .program-details li {
+      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+    }
+
+    .cta-button {
+      background-color: var(--white);
+      color: var(--orange);
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 2rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .cta-button:hover {
+      background-color: var(--light-orange);
+      color: var(--white);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: var(--gray-bg);
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      .header h1 {
+        font-size: 2rem;
+      }
+
+      .program-details ul {
+        font-size: 1rem;
+      }
+
+      .video-container iframe {
+        height: 220px;
+      }
+    }
+    .animated-underline {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 5px;
+    overflow: hidden;
+    }
+
+    .animated-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background-color: var(--orange);
+    animation: slide-in 2s ease-in-out infinite;
+    transform: translateX(-100%);
+    }
+
+    @keyframes slide-in {
+			0% {
+					transform: translateX(-100%);
+					opacity: 0;
+			}
+			50% {
+					transform: translateX(0%);
+					opacity: 1;
+			}
+			100% {
+					transform: translateX(100%);
+					opacity: 0;
+			}
+    }
+		:root {
+  --orange: #ff6f20;
+  --white: #ffffff;
+}
+
+/* Hero section */
+.hero {
+  background-color: var(--orange);
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Outer container with orange background */
+.border-animation {
+  position: relative;
+  padding: 3rem; /* Orange space around the white box */
+  background-color: var(--orange);
+  display: inline-block;
+  z-index: 0;
+  border-radius: 16px; /* Rounded corners for orange space */
+}
+
+/* White box (heading container) */
+.white-box {
+  background-color: var(--white);
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Heading text */
+.white-box h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: var(--orange);
+  margin: 0;
+}
+
+/* Animated white line around the orange container */
+.border-animation::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: 2px solid var(--white);
+  border-radius: 16px;
+  animation: slide-border 4s linear infinite;
+  z-index: 1;
+}
+
+/* Keyframes for sliding the white line around the orange container */
+@keyframes slide-border {
+  0% {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+  }
+  25% {
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  75% {
+    width: 0;
+    height: 100%;
+    top: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    height: 0;
+    top: 100%;
+    left: 100%;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+	<!-- Header Section -->
+	<section class="hero">
+		<div class="border-animation">
+			<div class="white-box">
+				<h1>03 DAYS 360 DEGREE BUSINESS COACHING PROGRAM – SCALE UP</h1>
+				<p>Join our exciting new program today!</p>
+			</div>
+		</div>
+	</section>	
+
+  <!-- Quote Section -->
+  <div class="quote">
+    <p>“The purpose of business is not income but impact.”<br>
+        “Entrepreneurs work on the business and not in the business.” <br>
+        “Leaders do not do easy things; they do right things.” <br>
+        “We do not have business problems; we have people, process & performance problems.” <br>
+        “Growth, progress & success are different and you need to achieve all of them.” <br>
+        “Business needs to be visible, relatable, scalable & predictable all the times.” <br>
+        - Nirav Sheth (Shoonyaham)</p>
+  </div>
+
+  <!-- Content Section -->
+  <div class="content">
+    <h2 class="animated-underline">About the Program</h2>
+    <p>This program is designed to provide innovative solutions for early-stage founders looking to scale with minimal effort.</p>
+    <p>Join us as we explore new approaches to simplify complex problems and achieve significant results.</p>
+  </div>
+
+  <!-- Video Section -->
+  <div class="video-container">
+    <h2>Watch Our Intro Video</h2>
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- Program Details Section -->
+  <div class="program-details">
+    <h2>Program Details</h2>
+    <p>Our program runs over 6 weeks, covering key areas such as:</p>
+    <ul>
+      <li>✅ Business Strategy</li>
+      <li>✅ Customer Acquisition</li>
+      <li>✅ Product Development</li>
+      <li>✅ Scaling Your Business</li>
+    </ul>
+    <a href="https://forms.gle/your-form-link" class="cta-button">Register Now</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Zero Efforts. All rights reserved.
+  </footer>
+
+</body>
+</html>
